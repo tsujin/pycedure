@@ -11,7 +11,3 @@ class Map:
 
     def __getitem__(self, item):
         return self.tiles[item]
-
-
-m = Map(5, 5)
-print(m[1][2])
