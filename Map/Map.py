@@ -1,5 +1,5 @@
 import numpy as np
-from Tile import Tile, TileType
+from Tile import floor, wall
 
 
 class Map:
@@ -7,7 +7,7 @@ class Map:
         self.width = width
         self.height = height
 
-        self.tiles = np.full((width, height), fill_value=Tile(TileType.FLOOR), order='F')
+        self.tiles = np.full((width, height), fill_value=floor, order='F')
 
     def __getitem__(self, item):
         return self.tiles[item]
